@@ -1,0 +1,132 @@
+/* line 3, ../src/sass/_style.scss */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  opacity: 0;
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+/* line 19, ../src/sass/_style.scss */
+.modal:target {
+  transform: translateY(0);
+  opacity: 1;
+}
+/* line 23, ../src/sass/_style.scss */
+.modal:target .modal__dialog {
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+/* line 28, ../src/sass/_style.scss */
+.modal__wrapper {
+  margin: auto;
+  position: relative;
+  display: table;
+  height: 100%;
+}
+/* line 35, ../src/sass/_style.scss */
+.modal__dialog {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  display: table-cell;
+  vertical-align: middle;
+  -moz-transform: translateY(100px);
+  -ms-transform: translateY(100px);
+  -webkit-transform: translateY(100px);
+  transform: translateY(100px);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+/* line 48, ../src/sass/_style.scss */
+.modal__close-btn {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  display: block;
+  text-decoration: none;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  font-family: Arial;
+  font-size: 28px;
+  color: #fff;
+  float: right;
+  cursor: pointer;
+}
+/* line 67, ../src/sass/_style.scss */
+.modal__close-btn:before {
+  content: "";
+  display: block;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+  display: none;
+}
+/* line 79, ../src/sass/_style.scss */
+[data-modalite-clickable-overlay] .modal__close-btn:before {
+  display: block;
+}
+/* line 86, ../src/sass/_style.scss */
+.modal__body {
+  position: relative;
+  z-index: 2;
+  clear: both;
+  padding: 32px;
+  background-color: #fff;
+}
+
+/*#\. {
+    display: none;
+}*/
+/* line 99, ../src/sass/_style.scss */
+.modal-content {
+  display: none;
+}
+
+/* line 103, ../src/sass/_style.scss */
+body {
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+/* line 108, ../src/sass/_style.scss */
+h2 {
+  font-weight: bold;
+  font-size: 23px;
+  margin-bottom: 16px;
+}
+
+/* line 114, ../src/sass/_style.scss */
+p {
+  margin: 0;
+}
